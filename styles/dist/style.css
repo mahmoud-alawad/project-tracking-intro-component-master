@@ -93,6 +93,9 @@ p {
   cursor: pointer;
   text-transform: uppercase;
 }
+.header .navbar .menu__links .links:hover {
+  color: #a0a1ac;
+}
 .header .navbar .menu__links .login {
   padding-left: 1rem;
   color: #5b5f71;
