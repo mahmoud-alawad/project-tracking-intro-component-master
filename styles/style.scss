@@ -20,7 +20,6 @@ body{
     font-family: 'Barlow', fantasy, sans-serif;
     font-weight: $fontWeight;
     min-height: 100vh;
-  
 }
 
 h1, h2, h3, h4, a{
@@ -36,18 +35,25 @@ ul, li{
 p{
     color: $DarkGrayishBlue;
 }
-/*________________________background__image*/
-.background__illustration{
-    position: absolute;
-    z-index: -9999;
-}
+
+
 
 /*________________________contaienr*/
 .container{
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
-    z-index: 1;
+    position: relative;
+       & .overlay{
+        position: absolute;
+        top: 0;
+        right: -5%;
+        height: 25rem;
+        width: 42rem;
+        background-color: $LightGrayishBlue;
+        border-bottom-left-radius: 4rem;
+        z-index: -9;
+    }
 }
 /*________________________header styel*/
 .header{
@@ -59,14 +65,14 @@ padding-top: 2.1rem;
 
     & .logo{
         margin-left: 3rem;
+        cursor: pointer;
     }
 
     & .menu__links{
         display: flex;
-
-
+       
         & .links{
-            margin-left: 1rem;
+            margin-left: 2.3rem;
             cursor: pointer;
             text-transform: uppercase;
         }
@@ -82,21 +88,66 @@ padding-top: 2.1rem;
 /*________________________content styel*/
 .content{
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    max-width: 650px;
+    justify-content: space-between;
+    height: 70vh;
     width: 100%;
     margin-top: 10rem;
-    background-image: url(../images/background-img.png);
 
-
+  & .left{
+      width: 50%;
+      padding-left: 3rem;
     & h4{
-
-        & span{
+        color: $GrayishBlue;
+        letter-spacing: 0.1rem;
+        line-height: 5;
+        & .mini__btn{
             color: $LightGrayishBlue;
             padding: 0.4rem;
-            background-color: $DarkGrayishBlue;
-            border-radius: 10px;
+            background-color: $VeryDarkBlue;
+            border-radius: 30px;
+            padding: 0.2rem 0.6rem;
+            cursor: pointer;
         }
     }
+    & .intro__title{
+        font-weight: 1000;
+        width: 100%;
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+
+    & .intro__text{
+        color: $GrayishBlue;
+        line-height: 1;
+        width: 80%;
+        padding: 2rem 0;
+    }
+
+    & .btn{
+        padding: 1rem 3.3rem;
+        color: $LightGrayishBlue;
+        background-color: $Red;
+        border: none;
+        border-radius: 8px;
+    }
+    & .btn__context{
+        color: $GrayishBlue;
+        letter-spacing: 0.3rem;
+        text-transform: uppercase;
+        font-weight: normal;
+    }
+
+  }
+   
+  & .right{
+   width: 40%;
+   position: relative;
+   & img{
+       position: absolute;
+        max-width: 50rem;
+        width: 45rem;
+        right: -20%;
+        top: 0;
+    }
+  }
 }

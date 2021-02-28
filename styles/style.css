@@ -31,18 +31,23 @@ p {
   color: #5b5f71;
 }
 
-/*________________________background__image*/
-.background__illustration {
-  position: absolute;
-  z-index: -9999;
-}
-
 /*________________________contaienr*/
 .container {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  z-index: 1;
+  position: relative;
+}
+
+.container .overlay {
+  position: absolute;
+  top: 0;
+  right: -5%;
+  height: 25rem;
+  width: 42rem;
+  background-color: #eef3f6;
+  border-bottom-left-radius: 4rem;
+  z-index: -9;
 }
 
 /*________________________header styel*/
@@ -61,6 +66,7 @@ p {
 
 .header .navbar .logo {
   margin-left: 3rem;
+  cursor: pointer;
 }
 
 .header .navbar .menu__links {
@@ -70,7 +76,7 @@ p {
 }
 
 .header .navbar .menu__links .links {
-  margin-left: 1rem;
+  margin-left: 2.3rem;
   cursor: pointer;
   text-transform: uppercase;
 }
@@ -85,23 +91,73 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  max-width: 650px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 70vh;
   width: 100%;
   margin-top: 10rem;
-  background-image: url(../images/background-img.png);
 }
 
-.content h4 span {
+.content .left {
+  width: 50%;
+  padding-left: 3rem;
+}
+
+.content .left h4 {
+  color: #a0a1ac;
+  letter-spacing: 0.1rem;
+  line-height: 5;
+}
+
+.content .left h4 .mini__btn {
   color: #eef3f6;
   padding: 0.4rem;
-  background-color: #5b5f71;
-  border-radius: 10px;
+  background-color: #242942;
+  border-radius: 30px;
+  padding: 0.2rem 0.6rem;
+  cursor: pointer;
+}
+
+.content .left .intro__title {
+  font-weight: 1000;
+  width: 100%;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.content .left .intro__text {
+  color: #a0a1ac;
+  line-height: 1;
+  width: 80%;
+  padding: 2rem 0;
+}
+
+.content .left .btn {
+  padding: 1rem 3.3rem;
+  color: #eef3f6;
+  background-color: #ff5c5c;
+  border: none;
+  border-radius: 8px;
+}
+
+.content .left .btn__context {
+  color: #a0a1ac;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.content .right {
+  width: 40%;
+  position: relative;
+}
+
+.content .right img {
+  position: absolute;
+  max-width: 50rem;
+  width: 45rem;
+  right: -20%;
+  top: 0;
 }
 /*# sourceMappingURL=style.css.map */
