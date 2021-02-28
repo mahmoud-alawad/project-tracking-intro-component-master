@@ -13,6 +13,7 @@ body {
   font-family: 'Barlow', fantasy, sans-serif;
   font-weight: 400;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 h1, h2, h3, h4, a {
@@ -31,12 +32,21 @@ p {
   color: #5b5f71;
 }
 
+.btn {
+  padding: 1rem 3.3rem;
+  color: #eef3f6;
+  background-color: #ff5c5c;
+  border: none;
+  border-radius: 8px;
+}
+
 /*________________________contaienr*/
 .container {
-  max-width: 1440px;
+  max-width: 1520px;
   width: 100%;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
 }
 
 .container .overlay {
@@ -53,6 +63,16 @@ p {
 /*________________________header styel*/
 .header {
   padding-top: 2.1rem;
+}
+
+.header .collpas {
+  display: none;
+  position: absolute;
+  top: 5.5%;
+  right: 2%;
+  color: #242942;
+  cursor: pointer;
+  font-size: 1.3rem;
 }
 
 .header .navbar {
@@ -73,6 +93,7 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-right: 1.5rem;
 }
 
 .header .navbar .menu__links .links {
@@ -84,6 +105,48 @@ p {
 .header .navbar .menu__links .login {
   padding-left: 1rem;
   color: #5b5f71;
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    position: relative;
+  }
+  .header .collpas {
+    display: block;
+    z-index: 6;
+  }
+  .header .open__menu {
+    top: 0.1rem !important;
+  }
+  .header .menu__links {
+    position: absolute;
+    right: 0;
+    top: -22rem;
+    width: 70%;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding: 4rem 0;
+    background-color: #ff5c5c;
+    border-bottom-left-radius: 20px;
+    z-index: 5;
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+  }
+  .header .menu__links .links {
+    margin-top: 2rem;
+  }
 }
 
 /*________________________content styel*/
@@ -102,6 +165,7 @@ p {
 .content .left {
   width: 50%;
   padding-left: 3rem;
+  padding: 1rem;
 }
 
 .content .left h4 {
@@ -146,6 +210,7 @@ p {
   letter-spacing: 0.3rem;
   text-transform: uppercase;
   font-weight: normal;
+  padding-left: 0.5rem;
 }
 
 .content .right {
@@ -154,10 +219,60 @@ p {
 }
 
 .content .right img {
-  position: absolute;
   max-width: 50rem;
   width: 45rem;
   right: -20%;
   top: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .content .left {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .content .left .btn {
+    width: 50%;
+    text-align: center;
+  }
+  .content .left .btn__context {
+    line-height: 2;
+  }
+  .content .right {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .content h4 {
+    color: #a0a1ac;
+    letter-spacing: 0.1rem;
+    line-height: 1;
+  }
+  .content h4 .mini__btn {
+    color: #eef3f6;
+    padding: 0.4rem;
+    background-color: #242942;
+    border-radius: 30px;
+    padding: 0.2rem 0.6rem;
+    cursor: pointer;
+  }
+}
+
+footer {
+  margin-top: 7rem;
 }
 /*# sourceMappingURL=style.css.map */
