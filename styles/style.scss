@@ -1,0 +1,102 @@
+/*colors and margins fonts etc */
+@import url(https://fonts.google.com/specimen/Barlow+Condensed);
+@import url(https://fonts.google.com/specimen/Barlow);
+$Red: hsl(0, 100%, 68%);
+$VeryDarkBlue: hsl(230, 29%, 20%);
+$DarkGrayishBlue: hsl(230, 11%, 40%);
+$GrayishBlue: hsl(231, 7%, 65%);
+$LightGrayishBlue: hsl(207, 33%, 95%);
+$fontWeight: 400;
+$fontWeightBiger: 700;
+
+
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 18px;
+    font-family: 'Barlow', fantasy, sans-serif;
+    font-weight: $fontWeight;
+    min-height: 100vh;
+  
+}
+
+h1, h2, h3, h4, a{
+    color: $VeryDarkBlue;
+    text-decoration: none;
+}
+ul, li{
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+    font-weight: $fontWeightBiger;
+}
+p{
+    color: $DarkGrayishBlue;
+}
+/*________________________background__image*/
+.background__illustration{
+    position: absolute;
+    z-index: -9999;
+}
+
+/*________________________contaienr*/
+.container{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 1;
+}
+/*________________________header styel*/
+.header{
+padding-top: 2.1rem;
+
+    & .navbar{
+    display: flex;
+    justify-content: space-between;
+
+    & .logo{
+        margin-left: 3rem;
+    }
+
+    & .menu__links{
+        display: flex;
+
+
+        & .links{
+            margin-left: 1rem;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+        & .login{
+            padding-left: 1rem;
+            color: $DarkGrayishBlue;
+        }
+    }
+
+    }
+
+}
+/*________________________content styel*/
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 650px;
+    width: 100%;
+    margin-top: 10rem;
+    background-image: url(../images/background-img.png);
+
+
+    & h4{
+
+        & span{
+            color: $LightGrayishBlue;
+            padding: 0.4rem;
+            background-color: $DarkGrayishBlue;
+            border-radius: 10px;
+        }
+    }
+}

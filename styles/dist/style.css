@@ -1,0 +1,86 @@
+/*colors and margins fonts etc */
+@import url(https://fonts.google.com/specimen/Barlow+Condensed);
+@import url(https://fonts.google.com/specimen/Barlow);
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Barlow", fantasy, sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, a {
+  color: #242942;
+  text-decoration: none;
+}
+
+ul, li {
+  text-decoration: none;
+  list-style: none;
+  list-style-type: none;
+  font-weight: 700;
+}
+
+p {
+  color: #5b5f71;
+}
+
+/*________________________background__image*/
+.background__illustration {
+  position: absolute;
+  z-index: -9999;
+}
+
+/*________________________contaienr*/
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+/*________________________header styel*/
+.header {
+  padding-top: 2.1rem;
+}
+.header .navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.header .navbar .logo {
+  margin-left: 3rem;
+}
+.header .navbar .menu__links {
+  display: flex;
+}
+.header .navbar .menu__links .links {
+  margin-left: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.header .navbar .menu__links .login {
+  padding-left: 1rem;
+  color: #5b5f71;
+}
+
+/*________________________content styel*/
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 650px;
+  width: 100%;
+  margin-top: 10rem;
+  background-image: url(../images/background-img.png);
+}
+.content h4 span {
+  color: #eef3f6;
+  padding: 0.4rem;
+  background-color: #5b5f71;
+  border-radius: 10px;
+}
